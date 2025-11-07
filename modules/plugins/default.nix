@@ -5,15 +5,20 @@
     pkgs,
     ...
   }: {
-    whichKey = {
-      enable = true;
-      preset = "modern";
-    };
-
-    neo-tree = {
+    vim = {
+      binds.whichKey = {
         enable = true;
-        enable_modified_markers = true;
-        enable_git_status = true;
+        setupOpts.preset = "modern";
       };
+
+      filetree.neo-tree = {
+        enable = true;
+      };
+
+      terminal.toggleterm = {
+        enable = true;
+        lazygit.enable = true;
+      };
+    };
   };
 }
