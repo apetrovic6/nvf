@@ -105,7 +105,12 @@
       ];
 
       statusline.lualine.enable = true;
-      telescope.enable = true;
+      telescope.enable = false;
+      # fzf-lua = {
+      #     enable = true;
+      #     profile = "";
+      # };
+      
       autocomplete.nvim-cmp.enable = true;
     };
   };

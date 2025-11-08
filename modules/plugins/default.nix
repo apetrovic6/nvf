@@ -7,6 +7,7 @@
   }: {
     imports = [
       self.nixosModules.oil
+      self.nixosModules.snacks
     ];
 
     vim = {
@@ -23,6 +24,16 @@
         enable = true;
         lazygit.enable = true;
       };
+
+      statusline.lualine.enable = true;
+      telescope.enable = false;
+      # fzf-lua = {
+      #     enable = true;
+      #     profile = "";
+      # };
+      
+      utility.snacks-nvim.enable = true;
+      autocomplete.nvim-cmp.enable = true;
     };
   };
 }
