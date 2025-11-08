@@ -30,7 +30,7 @@
       # terminal.toggleterm = {
       #   enable = true;
       #   lazygit.enable = true;
-# };
+      # };
 
       statusline.lualine.enable = true;
       telescope.enable = false;
@@ -46,11 +46,11 @@
 
       utility.motion.flash-nvim.enable = true;
       ui.noice.enable = true;
-      ui.colorizer =  {
-          enable = true;
-          setupOpts = {
-          };
+      ui.colorizer = {
+        enable = true;
+        setupOpts = {
         };
+      };
     };
   };
 }

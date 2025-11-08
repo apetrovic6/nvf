@@ -26,7 +26,7 @@
       scope.enabled = true;
       scroll.enabled = true;
       statuscolumn.enabled = true;
-        lazygit.enabled = true;
+      lazygit.enabled = true;
       # dashboard.enabled = true;
     };
 
