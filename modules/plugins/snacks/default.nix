@@ -4,7 +4,9 @@
     lib,
     pkgs,
     ...
-  }: {
+  }: let
+    lua = self.lib.lua;
+  in {
     imports = [
       self.nixosModules.snacks-picker
     ];
@@ -21,6 +23,32 @@
       input.enabled = true;
       rename.enabled = true;
       terminal.enabled = true;
+      scope.enabled = true;
+      scroll.enabled = true;
+      statuscolumn.enabled = true;
+        lazygit.enabled = true;
+      # dashboard.enabled = true;
     };
+
+    vim.keymaps = [
+      # General
+      {
+        key = "<leader>bD";
+        mode = "n";
+        silent = true;
+        noremap = true;
+        desc = "Delete all buffers";
+        action = lua.mkLuaCmd "snacks" "bufdelete.all";
+      }
+
+      {
+        key = "<leader>bo";
+        mode = "n";
+        silent = true;
+        noremap = true;
+        desc = "Delete other buffers";
+        action = lua.mkLuaCmd "snacks" "bufdelete.other";
+      }
+    ];
   };
 }
