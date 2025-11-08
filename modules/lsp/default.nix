@@ -5,8 +5,10 @@
     pkgs,
     ...
   }: {
+
+    vim.lsp.enable = true;
+
     vim.languages = {
-      enableLSP = true;
       enableTreesitter = true;
       enableFormat = true;
 
