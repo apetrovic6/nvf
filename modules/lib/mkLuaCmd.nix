@@ -1,5 +1,12 @@
-{ lib ? import <nixpkgs/lib> {} }:
-{
+
+{self, ...}: {
+  flake.modules.lua = {
+    config,
+    lib,
+    pkgs,
+    ...
+  }: {
+
   mkLuaCmd     = module: fn: "<CMD>lua(require '${module}').${fn}()<CR>";
   mkLuaCmdArgs = module: fn: args:
     let
@@ -10,5 +17,6 @@
         ) args) + ")";
     in "<CMD>lua(require '${module}').${fn}" + mkArgs + "<CR>";
   mkLuaFnRaw   = module: fn: "function() require('${module}').${fn}() end";
+};
 }
 
