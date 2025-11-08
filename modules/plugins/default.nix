@@ -5,9 +5,9 @@
     pkgs,
     ...
   }: {
-      imports = [
-        self.nixosModules.oil
-      ];
+    imports = [
+      self.nixosModules.oil
+    ];
 
     vim = {
       binds.whichKey = {
