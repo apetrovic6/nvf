@@ -24,6 +24,7 @@
     nvf,
     import-tree,
     treefmt,
+    nixpkgs,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -39,6 +40,8 @@
         treefmt.flakeModule
       ];
 
+      flake.lib.lua = import ./lib/mkLuaCmd.nix {lib = nixpkgs.lib;};
+
       perSystem = {
         self',
         pkgs,
@@ -51,9 +54,11 @@
           programs.alejandra.enable = true; # Nix formatter
           # add more: programs.prettier.enable = true; etc.
         };
+
         packages.default =
           (nvf.lib.neovimConfiguration {
             inherit pkgs;
+
             modules = [
               self.nixosModules.default
             ];
