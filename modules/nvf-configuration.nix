@@ -19,8 +19,8 @@
     vim = {
       theme = {
         enable = true;
-        name = "everforest";
-        style = "medium";
+        name = "nord";
+        style = "dark";
       };
 
       options = {
