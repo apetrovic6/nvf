@@ -21,7 +21,7 @@
         silent = true;
         noremap = true;
         desc = "Smart Find Files";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.smart";
+        action = lua.mkLuaGlobalCmd "${picker}.smart";
       }
       {
         key = "<leader>,";
@@ -29,7 +29,7 @@
         silent = true;
         noremap = true;
         desc = "Buffers";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.buffers";
+        action = lua.mkLuaGlobalCmd "${picker}.buffers";
       }
       {
         key = "<leader>/";
@@ -37,7 +37,7 @@
         silent = true;
         noremap = true;
         desc = "Grep";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.grep";
+        action = lua.mkLuaGlobalCmd "${picker}.grep";
       }
       {
         key = "<leader>:";
@@ -45,7 +45,7 @@
         silent = true;
         noremap = true;
         desc = "Command History";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.command_history";
+        action = lua.mkLuaGlobalCmd "${picker}.command_history";
       }
       {
         key = "<leader>n";
@@ -53,7 +53,7 @@
         silent = true;
         noremap = true;
         desc = "Notification History";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.notifications";
+        action = lua.mkLuaGlobalCmd "${picker}.notifications";
       }
       {
         key = "<leader>e";
@@ -71,7 +71,7 @@
         silent = true;
         noremap = true;
         desc = "Buffers";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.buffers";
+        action = lua.mkLuaGlobalCmd "${picker}.buffers";
       }
       {
         key = "<leader>fc";
@@ -79,7 +79,7 @@
         silent = true;
         noremap = true;
         desc = "Find Config File";
-        action = lua.mkLuaGlobalArgs "Snacks.picker.files" ["{ cwd = vim.fn.stdpath('config') }"];
+        action = lua.mkLuaGlobalArgs "${picker}.files" ["{ cwd = vim.fn.stdpath('config') }"];
       }
       {
         key = "<leader>ff";
@@ -87,7 +87,7 @@
         silent = true;
         noremap = true;
         desc = "Find Files";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.files";
+        action = lua.mkLuaGlobalCmd "${picker}.files";
       }
       {
         key = "<leader>fg";
@@ -95,7 +95,7 @@
         silent = true;
         noremap = true;
         desc = "Find Git Files";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_files";
+        action = lua.mkLuaGlobalCmd "${picker}.git_files";
       }
       {
         key = "<leader>fp";
@@ -103,7 +103,7 @@
         silent = true;
         noremap = true;
         desc = "Projects";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.projects";
+        action = lua.mkLuaGlobalCmd "${picker}.projects";
       }
       {
         key = "<leader>fr";
@@ -111,7 +111,7 @@
         silent = true;
         noremap = true;
         desc = "Recent";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.recent";
+        action = lua.mkLuaGlobalCmd "${picker}.recent";
       }
 
       # git
@@ -121,7 +121,7 @@
         silent = true;
         noremap = true;
         desc = "Git Branches";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_branches";
+        action = lua.mkLuaGlobalCmd "${picker}.git_branches";
       }
       {
         key = "<leader>gl";
@@ -129,7 +129,7 @@
         silent = true;
         noremap = true;
         desc = "Git Log";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_log";
+        action = lua.mkLuaGlobalCmd "${picker}.git_log";
       }
       {
         key = "<leader>gL";
@@ -137,7 +137,7 @@
         silent = true;
         noremap = true;
         desc = "Git Log Line";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_log_line";
+        action = lua.mkLuaGlobalCmd "${picker}.git_log_line";
       }
       {
         key = "<leader>gs";
@@ -145,7 +145,7 @@
         silent = true;
         noremap = true;
         desc = "Git Status";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_status";
+        action = lua.mkLuaGlobalCmd "${picker}.git_status";
       }
       {
         key = "<leader>gS";
@@ -153,7 +153,7 @@
         silent = true;
         noremap = true;
         desc = "Git Stash";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_stash";
+        action = lua.mkLuaGlobalCmd "${picker}.git_stash";
       }
       {
         key = "<leader>gd";
@@ -161,7 +161,7 @@
         silent = true;
         noremap = true;
         desc = "Git Diff (Hunks)";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_diff";
+        action = lua.mkLuaGlobalCmd "${picker}.git_diff";
       }
       {
         key = "<leader>gf";
@@ -169,7 +169,7 @@
         silent = true;
         noremap = true;
         desc = "Git Log File";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.git_log_file";
+        action = lua.mkLuaGlobalCmd "${picker}.git_log_file";
       }
 
       # gh
@@ -179,7 +179,7 @@
         silent = true;
         noremap = true;
         desc = "GitHub Issues (open)";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.gh_issue";
+        action = lua.mkLuaGlobalCmd "${picker}.gh_issue";
       }
       {
         key = "<leader>gI";
@@ -187,7 +187,7 @@
         silent = true;
         noremap = true;
         desc = "GitHub Issues (all)";
-        action = lua.mkLuaGlobalArgs "Snacks.picker.gh_issue" ["{ state = 'all' }"];
+        action = lua.mkLuaGlobalArgs "${picker}.gh_issue" ["{ state = 'all' }"];
       }
       {
         key = "<leader>gp";
@@ -195,7 +195,7 @@
         silent = true;
         noremap = true;
         desc = "GitHub Pull Requests (open)";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.gh_pr";
+        action = lua.mkLuaGlobalCmd "${picker}.gh_pr";
       }
       {
         key = "<leader>gP";
@@ -203,7 +203,7 @@
         silent = true;
         noremap = true;
         desc = "GitHub Pull Requests (all)";
-        action = lua.mkLuaGlobalArgs "Snacks.picker.gh_pr" ["{ state = 'all' }"];
+        action = lua.mkLuaGlobalArgs "${picker}.gh_pr" ["{ state = 'all' }"];
       }
 
       # Grep
@@ -213,7 +213,7 @@
         silent = true;
         noremap = true;
         desc = "Buffer Lines";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lines";
+        action = lua.mkLuaGlobalCmd "${picker}.lines";
       }
       {
         key = "<leader>sB";
@@ -221,7 +221,7 @@
         silent = true;
         noremap = true;
         desc = "Grep Open Buffers";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.grep_buffers";
+        action = lua.mkLuaGlobalCmd "${picker}.grep_buffers";
       }
       {
         key = "<leader>sg";
@@ -229,7 +229,7 @@
         silent = true;
         noremap = true;
         desc = "Grep";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.grep";
+        action = lua.mkLuaGlobalCmd "${picker}.grep";
       }
       {
         key = "<leader>sw";
@@ -237,7 +237,7 @@
         silent = true;
         noremap = true;
         desc = "Visual selection or word";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.grep_word";
+        action = lua.mkLuaGlobalCmd "${picker}.grep_word";
       }
 
       # search
@@ -247,7 +247,7 @@
         silent = true;
         noremap = true;
         desc = "Registers";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.registers";
+        action = lua.mkLuaGlobalCmd "${picker}.registers";
       }
       {
         key = "<leader>s/";
@@ -255,7 +255,7 @@
         silent = true;
         noremap = true;
         desc = "Search History";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.search_history";
+        action = lua.mkLuaGlobalCmd "${picker}.search_history";
       }
       {
         key = "<leader>sa";
@@ -263,7 +263,7 @@
         silent = true;
         noremap = true;
         desc = "Autocmds";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.autocmds";
+        action = lua.mkLuaGlobalCmd "${picker}.autocmds";
       }
       {
         key = "<leader>sb";
@@ -271,7 +271,7 @@
         silent = true;
         noremap = true;
         desc = "Buffer Lines";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lines";
+        action = lua.mkLuaGlobalCmd "${picker}.lines";
       }
       {
         key = "<leader>sc";
@@ -279,7 +279,7 @@
         silent = true;
         noremap = true;
         desc = "Command History";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.command_history";
+        action = lua.mkLuaGlobalCmd "${picker}.command_history";
       }
       {
         key = "<leader>sC";
@@ -287,7 +287,7 @@
         silent = true;
         noremap = true;
         desc = "Commands";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.commands";
+        action = lua.mkLuaGlobalCmd "${picker}.commands";
       }
       {
         key = "<leader>sd";
@@ -295,7 +295,7 @@
         silent = true;
         noremap = true;
         desc = "Diagnostics";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.diagnostics";
+        action = lua.mkLuaGlobalCmd "${picker}.diagnostics";
       }
       {
         key = "<leader>sD";
@@ -303,7 +303,7 @@
         silent = true;
         noremap = true;
         desc = "Buffer Diagnostics";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.diagnostics_buffer";
+        action = lua.mkLuaGlobalCmd "${picker}.diagnostics_buffer";
       }
       {
         key = "<leader>sh";
@@ -311,7 +311,7 @@
         silent = true;
         noremap = true;
         desc = "Help Pages";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.help";
+        action = lua.mkLuaGlobalCmd "${picker}.help";
       }
       {
         key = "<leader>sH";
@@ -319,7 +319,7 @@
         silent = true;
         noremap = true;
         desc = "Highlights";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.highlights";
+        action = lua.mkLuaGlobalCmd "${picker}.highlights";
       }
       {
         key = "<leader>si";
@@ -327,7 +327,7 @@
         silent = true;
         noremap = true;
         desc = "Icons";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.icons";
+        action = lua.mkLuaGlobalCmd "${picker}.icons";
       }
       {
         key = "<leader>sj";
@@ -335,7 +335,7 @@
         silent = true;
         noremap = true;
         desc = "Jumps";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.jumps";
+        action = lua.mkLuaGlobalCmd "${picker}.jumps";
       }
       {
         key = "<leader>sk";
@@ -343,7 +343,7 @@
         silent = true;
         noremap = true;
         desc = "Keymaps";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.keymaps";
+        action = lua.mkLuaGlobalCmd "${picker}.keymaps";
       }
       {
         key = "<leader>sl";
@@ -351,7 +351,7 @@
         silent = true;
         noremap = true;
         desc = "Location List";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.loclist";
+        action = lua.mkLuaGlobalCmd "${picker}.loclist";
       }
       {
         key = "<leader>sm";
@@ -359,7 +359,7 @@
         silent = true;
         noremap = true;
         desc = "Marks";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.marks";
+        action = lua.mkLuaGlobalCmd "${picker}.marks";
       }
       {
         key = "<leader>sM";
@@ -367,7 +367,7 @@
         silent = true;
         noremap = true;
         desc = "Man Pages";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.man";
+        action = lua.mkLuaGlobalCmd "${picker}.man";
       }
       {
         key = "<leader>sp";
@@ -375,7 +375,7 @@
         silent = true;
         noremap = true;
         desc = "Search for Plugin Spec";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lazy";
+        action = lua.mkLuaGlobalCmd "${picker}.lazy";
       }
       {
         key = "<leader>sq";
@@ -383,7 +383,7 @@
         silent = true;
         noremap = true;
         desc = "Quickfix List";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.qflist";
+        action = lua.mkLuaGlobalCmd "${picker}.qflist";
       }
       {
         key = "<leader>sR";
@@ -391,7 +391,7 @@
         silent = true;
         noremap = true;
         desc = "Resume";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.resume";
+        action = lua.mkLuaGlobalCmd "${picker}.resume";
       }
       {
         key = "<leader>su";
@@ -399,7 +399,7 @@
         silent = true;
         noremap = true;
         desc = "Undo History";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.undo";
+        action = lua.mkLuaGlobalCmd "${picker}.undo";
       }
       {
         key = "<leader>uC";
@@ -407,7 +407,7 @@
         silent = true;
         noremap = true;
         desc = "Colorschemes";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.colorschemes";
+        action = lua.mkLuaGlobalCmd "${picker}.colorschemes";
       }
 
       # LSP
@@ -417,7 +417,7 @@
         silent = true;
         noremap = true;
         desc = "Goto Definition";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_definitions";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_definitions";
       }
       {
         key = "gD";
@@ -425,7 +425,7 @@
         silent = true;
         noremap = true;
         desc = "Goto Declaration";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_declarations";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_declarations";
       }
       {
         key = "gr";
@@ -434,7 +434,7 @@
         noremap = true;
         nowait = true;
         desc = "References";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_references";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_references";
       }
       {
         key = "gI";
@@ -442,7 +442,7 @@
         silent = true;
         noremap = true;
         desc = "Goto Implementation";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_implementations";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_implementations";
       }
       {
         key = "gy";
@@ -450,7 +450,7 @@
         silent = true;
         noremap = true;
         desc = "Goto T[y]pe Definition";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_type_definitions";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_type_definitions";
       }
       {
         key = "gai";
@@ -458,7 +458,7 @@
         silent = true;
         noremap = true;
         desc = "C[a]lls Incoming";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_incoming_calls";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_incoming_calls";
       }
       {
         key = "gao";
@@ -466,7 +466,7 @@
         silent = true;
         noremap = true;
         desc = "C[a]lls Outgoing";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_outgoing_calls";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_outgoing_calls";
       }
       {
         key = "<leader>ss";
@@ -474,7 +474,7 @@
         silent = true;
         noremap = true;
         desc = "LSP Symbols";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_symbols";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_symbols";
       }
       {
         key = "<leader>sS";
@@ -482,7 +482,7 @@
         silent = true;
         noremap = true;
         desc = "LSP Workspace Symbols";
-        action = lua.mkLuaGlobalCmd "Snacks.picker.lsp_workspace_symbols";
+        action = lua.mkLuaGlobalCmd "${picker}.lsp_workspace_symbols";
       }
 
       # Other

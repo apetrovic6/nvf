@@ -17,7 +17,7 @@
       };
 
       filetree.neo-tree = {
-        enable = false ;
+        enable = false;
       };
 
       terminal.toggleterm = {
@@ -31,7 +31,7 @@
       #     enable = true;
       #     profile = "";
       # };
-      
+
       utility.snacks-nvim.enable = true;
       autocomplete.nvim-cmp.enable = true;
     };
