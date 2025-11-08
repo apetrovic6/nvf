@@ -22,4 +22,6 @@ in {
   # For globals like: Snacks.picker.smart()
   mkLuaGlobalCmd = funPath: "<cmd>lua " + funPath + "()<cr>";
   mkLuaGlobalFnRaw = funPath: "function() " + funPath + "() end";
+  mkLuaGlobalArgs = funPath: args:
+    "<cmd>lua " + funPath + "(" + (lib.concatStringsSep ", " args) + ")<cr>";
 }

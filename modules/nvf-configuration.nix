@@ -1,10 +1,16 @@
-{self, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.nixosModules.default = {
     config,
     lib,
     pkgs,
     ...
-  }: {
+  }: let
+    lua = inputs.self.lib.lua;
+  in {
     imports = [
       self.nixosModules.lsp
       self.nixosModules.plugins

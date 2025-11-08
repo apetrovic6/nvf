@@ -12,10 +12,15 @@
     vim.utility.snacks-nvim.enable = true;
 
     vim.utility.snacks-nvim.setupOpts = {
-      indent.enabled = true;
-      dashboard.enabled = false;
-      quickfile.enabled = true;
-      notifier.enabled = true;
+        animate.enabled=true;
+        debug.enabled=true;
+        dim.enabled= true;
+        git.enabled= true;
+        gitbrowse.enabled= true;
+        image.enabled =true;
+        input.enabled= true;
+        rename.enabled= true;
+        terminal.enabled= true;
     };
   };
 }
