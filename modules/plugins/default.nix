@@ -12,11 +12,11 @@
     vim = {
       binds.whichKey = {
         enable = true;
-        setupOpts.preset = "modern";
+        setupOpts.preset = "helix";
       };
 
       filetree.neo-tree = {
-        enable = true;
+        enable = false ;
       };
 
       terminal.toggleterm = {
