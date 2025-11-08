@@ -1,31 +1,40 @@
-{inputs, ...}: {
+{...}: {
   flake.nixosModules.lsp = {
     config,
     lib,
     pkgs,
     ...
   }: {
-    vim.lsp.enable = true;
     vim.languages = {
+      enableLSP = true;
       enableTreesitter = true;
-      enableDAP = true;
       enableFormat = true;
 
-      nix.enable = true;
-      ts.enable = true;
+      bash.enable = true;
+      clang.enable = true;
 
-      rust = {
-        enable = true;
-        crates.enable = true;
-      };
+      csharp.enable = true;
 
-      sql.enable = true;
-      markdown.enable = true;
+      fsharp.enable = true;
+      ocaml.enable = true;
+      haskell.enable = true;
+      elixir.enable = true;
+
       html.enable = true;
+      css.enable = true;
+      tailwind.enable = true;
+      ts.enable = true;
+      sql.enable = true;
+
+      nix.enable = true;
+      rust.enable = true;
+      markdown.enable = true;
       go.enable = true;
       lua.enable = true;
-      csharp.enable = true;
-      ocaml.enable = true;
+
+      helm.enable = true;
+      yaml.enable = true;
+
       java.enable = true;
       kotlin.enable = true;
     };
