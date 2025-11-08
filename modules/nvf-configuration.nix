@@ -110,7 +110,7 @@
       #     enable = true;
       #     profile = "";
       # };
-      
+
       autocomplete.nvim-cmp.enable = true;
     };
   };
