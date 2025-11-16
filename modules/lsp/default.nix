@@ -5,7 +5,6 @@
     pkgs,
     ...
   }: {
-
     vim.lsp.enable = true;
 
     vim.languages = {
@@ -15,7 +14,7 @@
       bash.enable = true;
       clang.enable = true;
 
-      csharp.enable = true;
+      csharp.enable = false;
 
       fsharp.enable = true;
       ocaml.enable = true;
